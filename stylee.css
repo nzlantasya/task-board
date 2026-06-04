@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fef6f6;
+    color: #4a4a4a;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 32px;
+    color: #5d5d5d;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #888;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: 320px;
+    border: 2px solid #e8e8e8;
+    border-radius: 25px;
+    font-size: 16px;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #b8b8b8;
+}
+
+button#addBtn {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    color: #555;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: transform 0.2s;
+}
+
+button#addBtn:hover {
+    transform: scale(1.05);
+}
+
+/* Board Layout */
+.board {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Column - Gradasi Soft */
+.column {
+    flex: 1;
+    border-radius: 20px;
+    padding: 15px;
+    min-height: 450px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+#todo {
+    background: linear-gradient(180deg, #e3f2fd 0%, #bbdefb 100%);
+}
+
+#doing {
+    background: linear-gradient(180deg, #fce4ec 0%, #f8bbd0 100%);
+}
+
+#done {
+    background: linear-gradient(180deg, #e8f5e9 0%, #c8e6c9 100%);
+}
+
+/* Header Kolom - Warna SOFTER */
+.column h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Warna Soft - Bukan Bold! */
+#todo .header-todo { background-color: #89bce8; }   /* Soft Blue */
+#doing .header-doing { background-color: #f4a5c4; } /* Soft Pink */
+#done .header-done { background-color: #a3dcb0; }    /* Soft Green */
+
+/* Task Card - Putih Bersih */
+.task-card {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.task-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.task-title {
+    font-size: 15px;
+    font-weight: 500;
+    word-wrap: break-word;
+    color: #444;
+    line-height: 1.4;
+}
+
+/* Kontrol Kartu */
+.card-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #f0f0f0;
+}
+
+select.status-select {
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    background-color: #fafafa;
+    cursor: pointer;
+    color: #555;
+}
+
+.btn-action {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.btn-action:hover {
+    opacity: 0.8;
+}
+
+.btn-edit { 
+    background-color: #ffb74d; 
+    margin-right: 5px;
+}
+.btn-delete { 
+    background-color: #e57373; 
+}
